@@ -34,5 +34,10 @@ app.get('/details', async (req, res) => {
     const user = await userModel.find({});
     res.send(user);
 });
+app.get('/details2', async (req, res) => {
+    // const user = await userModel.findOne({id: 123});
+    const user = await userModel.find({});
+    res.send(user);
+});
 
 app.listen(process.env.PORT || port, () => console.log(`Hello world app listening on port ${port}!`))
