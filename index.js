@@ -14,7 +14,7 @@ const corsOptions = {
 app.use(cors(corsOptions));
 
 mongoose.connect(
-  "mongodb+srv://kunGup:kunGup@cluster0.0stwx.mongodb.net/testDB?retryWrites=true&w=majority",
+  "mongodb+srv://kunGup:3TI0HbA5bxJdD3Au@cluster0.0stwx.mongodb.net/testDB?retryWrites=true&w=majority",
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
