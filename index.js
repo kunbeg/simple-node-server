@@ -3,18 +3,16 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 const mongoose = require("mongoose");
 const userModel = require("./models");
+require("dotenv").config();
 
 const app = express();
 const port = 80;
 
-const corsOptions = {
-  origin: "https://harmonious-tiramisu-389648.netlify.app",
-  credentials: true,
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
+let MONGO_URL = process.env.MONGO_URL
 mongoose.connect(
-  "mongodb+srv://kunGup:3TI0HbA5bxJdD3Au@cluster0.0stwx.mongodb.net/testDB?retryWrites=true&w=majority",
+  MONGO_URL,
   {
     useNewUrlParser: true,
     useUnifiedTopology: true,
