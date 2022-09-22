@@ -8,7 +8,7 @@ const app = express();
 const port = 80;
 
 const corsOptions = {
-  origin: "https://harmonious-tiramisu-389648.netlify.app/",
+  origin: "https://harmonious-tiramisu-389648.netlify.app",
   credentials: true,
 };
 app.use(cors(corsOptions));
