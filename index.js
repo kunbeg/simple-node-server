@@ -8,16 +8,17 @@ const app = express();
 const port = 80;
 
 const corsOptions = {
-    origin: 'https://mystifying-johnson-d35d1f.netlify.app',
-    credentials: true,
+  origin: "https://harmonious-tiramisu-389648.netlify.app/",
+  credentials: true,
 };
 app.use(cors(corsOptions));
 
-mongoose.connect('mongodb+srv://mongouser:mongouser@cluster0.c4yrp.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true
-    }
+mongoose.connect(
+  "mongodb+srv://kunGup:kunGup@cluster0.0stwx.mongodb.net/testDB?retryWrites=true&w=majority",
+  {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  }
 );
 
 const db = mongoose.connection;
@@ -36,4 +37,4 @@ app.get('/details', async (req, res) => {
     res.send(user);
 });
 
-app.listen(port, () => console.log(`Hello world app listening on port ${port}!`))
+app.listen(process.env.PORT || port, () => console.log(`Hello world app listening on port ${port}!`))
